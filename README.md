@@ -163,13 +163,6 @@ streamlit run app.py
 
 The app will open at `http://localhost:8501`
 
----
-
-## 🧪 Running Tests
-
-```bash
-pytest tests/test_qa_chain.py -v
-```
 
 ---
 
