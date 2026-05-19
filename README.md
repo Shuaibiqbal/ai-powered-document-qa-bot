@@ -80,8 +80,6 @@ ai-powered-document-qa-bot/
 │   └── qa_chain.py           # RetrievalQA chain setup
 ├── data/
 │   └── sample.pdf            # Sample test document
-└── tests/
-    └── test_qa_chain.py      # Unit tests for QA chain
 ```
 
 ---
