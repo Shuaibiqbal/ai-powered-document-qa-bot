@@ -175,9 +175,8 @@ pytest tests/test_qa_chain.py -v
 
 ## 📸 Screenshot
 
-> *Add your Streamlit Cloud screenshot here*
-
----
+![AI Document Q&A Bot](screenshot/AI-Powered%20Document%20Q%26A%20Bot.png)
+![Chat With PDF](screenshot/ChatWithAnyPdf.png)
 
 ## 🌐 Live Demo
 
