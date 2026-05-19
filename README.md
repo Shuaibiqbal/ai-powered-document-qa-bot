@@ -2,9 +2,9 @@
 
 > Upload any PDF and get instant, accurate, AI-powered answers — grounded in your document, not hallucinations.
 
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
-[![LangChain](https://img.shields.io/badge/LangChain-0.1+-1C3C3C?style=flat&logo=chainlink&logoColor=white)](https://langchain.com)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B?style=flat&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
+[![LangChain](https://img.shields.io/badge/LangChain-0.3.30-1C3C3C?style=flat&logo=chainlink&logoColor=white)](https://langchain.com)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.36.0-FF4B4B?style=flat&logo=streamlit&logoColor=white)](https://streamlit.io)
 [![OpenAI](https://img.shields.io/badge/OpenAI-GPT--3.5-412991?style=flat&logo=openai&logoColor=white)](https://openai.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -51,14 +51,18 @@ PDF Upload → Chunking → Embedding → Vector Store → Semantic Search → G
 
 | Tool | Version | Purpose |
 |------|---------|---------|
-| Python | 3.10+ | Core language |
-| LangChain | 0.1+ | RAG orchestration & chain management |
-| OpenAI GPT-3.5-turbo | Latest | LLM for answer generation |
-| FAISS | Latest | Vector similarity search |
-| OpenAI Embeddings | text-embedding-ada-002 | Text vectorization |
-| PyPDF2 / pdfplumber | Latest | PDF parsing |
-| Streamlit | 1.x | Web UI |
-| python-dotenv | Latest | Environment variable management |
+| Python | 3.12 | Core language |
+| LangChain | 0.3.30 | RAG orchestration & chain management |
+| LangChain Community | 0.3.27 | Document loaders & FAISS integration |
+| LangChain OpenAI | 0.3.30 | OpenAI embeddings & chat model wrappers |
+| LangChain Core | 0.3.74 | Base interfaces & LCEL primitives |
+| LangChain Text Splitters | 0.3.9 | Recursive text chunking |
+| OpenAI | 1.59.9 | GPT-3.5-turbo API access |
+| FAISS CPU | 1.12.0 | Vector similarity search |
+| pypdf | 6.0.0 | PDF parsing (modern replacement for PyPDF2) |
+| Streamlit | 1.36.0 | Web UI |
+| tiktoken | 0.9.0 | Token counting for OpenAI models |
+| python-dotenv | 1.0.1 | Environment variable management |
 
 ---
 
@@ -85,17 +89,32 @@ ai-powered-document-qa-bot/
 ## 📦 Requirements
 
 ```txt
-langchain==0.1.20
-langchain-community==0.0.38
-langchain-openai==0.1.6
-openai==1.30.1
-faiss-cpu==1.8.0
-streamlit==1.35.0
-pypdf2==3.0.1
-pdfplumber==0.11.0
-python-dotenv==1.0.1
-tiktoken==0.7.0
-```
+# requirements.txt
+
+# LangChain ecosystem
+langchain==1.3.1
+langchain-community==0.4.1
+langchain-openai==1.2.1
+langchain-core==1.4.0
+langchain-text-splitters==1.1.2
+
+# OpenAI
+openai==2.37.0
+
+# Vector store
+faiss-cpu==1.13.2
+
+# PDF parsing
+pypdf==6.11.0
+
+# Tokenizer
+tiktoken==0.13.0
+
+# UI
+streamlit==1.57.0
+
+# Environment variables
+python-dotenv==1.2.2
 
 > Install all dependencies at once:
 > ```bash
@@ -108,7 +127,7 @@ tiktoken==0.7.0
 
 ### Prerequisites
 
-- Python 3.10 or higher
+- Python **3.12** installed
 - An [OpenAI API key](https://platform.openai.com/api-keys)
 
 ### Installation
@@ -118,19 +137,27 @@ tiktoken==0.7.0
 git clone https://github.com/Shuaibiqbal/ai-powered-document-qa-bot
 cd ai-powered-document-qa-bot
 
-# 2. Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate        # On Windows: venv\Scripts\activate
+# 2. Create a virtual environment with Python 3.12
+python3.12 -m venv venv
 
-# 3. Install dependencies
+# 3. Activate the virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# 4. Upgrade pip
+pip install --upgrade pip
+
+# 5. Install dependencies
 pip install -r requirements.txt
 
-# 4. Set up environment variables
+# 6. Set up environment variables
 cp .env.example .env
 # Open .env and add your OpenAI API key:
 # OPENAI_API_KEY=sk-...
 
-# 5. Run the app
+# 7. Run the app
 streamlit run app.py
 ```
 
@@ -163,7 +190,7 @@ pytest tests/test_qa_chain.py -v
 - **RAG Architecture** — Retrieval-Augmented Generation end-to-end
 - **Vector Databases** — FAISS indexing and similarity search
 - **Text Embeddings** — Semantic representation of document chunks
-- **LangChain Chains** — `RetrievalQA` chain composition
+- **LangChain LCEL** — Modern chain composition with LangChain Expression Language
 - **PDF Ingestion** — Real-world document parsing and preprocessing
 - **Streamlit UI** — Production-grade interactive web interface
 

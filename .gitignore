@@ -1,0 +1,20 @@
+# Secret keys - never push to GitHub
+.env
+
+# Python virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# FAISS index (auto-generated)
+faiss_index/
+
+# Uploaded files (temporary)
+data/uploaded/
+
+# OS files
+.DS_Store
+Thumbs.db
