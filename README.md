@@ -178,9 +178,6 @@ pytest tests/test_qa_chain.py -v
 ![AI Document Q&A Bot](screenshot/AI-Powered%20Document%20Q%26A%20Bot.png)
 ![Chat With PDF](screenshot/ChatWithAnyPdf.png)
 
-## 🌐 Live Demo
-
-> *Add your Streamlit Cloud deployment link here*
 
 ---
 
