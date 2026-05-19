@@ -52,17 +52,17 @@ PDF Upload → Chunking → Embedding → Vector Store → Semantic Search → G
 | Tool | Version | Purpose |
 |------|---------|---------|
 | Python | 3.12 | Core language |
-| LangChain | 0.3.30 | RAG orchestration & chain management |
-| LangChain Community | 0.3.27 | Document loaders & FAISS integration |
-| LangChain OpenAI | 0.3.30 | OpenAI embeddings & chat model wrappers |
-| LangChain Core | 0.3.74 | Base interfaces & LCEL primitives |
-| LangChain Text Splitters | 0.3.9 | Recursive text chunking |
+| LangChain | 1.3.1 | RAG orchestration & chain management |
+| LangChain Community | 0.4.1 | Document loaders & FAISS integration |
+| LangChain OpenAI | 1.2.1 | OpenAI embeddings & chat model wrappers |
+| LangChain Core | 1.4.0 | Base interfaces & LCEL primitives |
+| LangChain Text Splitters | 1.1.2 | Recursive text chunking |
 | OpenAI | 1.59.9 | GPT-3.5-turbo API access |
-| FAISS CPU | 1.12.0 | Vector similarity search |
-| pypdf | 6.0.0 | PDF parsing (modern replacement for PyPDF2) |
-| Streamlit | 1.36.0 | Web UI |
-| tiktoken | 0.9.0 | Token counting for OpenAI models |
-| python-dotenv | 1.0.1 | Environment variable management |
+| FAISS CPU | 1.13.2 | Vector similarity search |
+| pypdf | 6.11.0 | PDF parsing (modern replacement for PyPDF2) |
+| Streamlit | 1.57.0 | Web UI |
+| tiktoken | 0.13.0 | Token counting for OpenAI models |
+| python-dotenv | 1.2.2 | Environment variable management |
 
 ---
 
